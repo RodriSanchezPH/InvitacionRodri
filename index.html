@@ -85,6 +85,9 @@ body::before{
   align-items: center;
   animation: arrowFade 1.8s infinite;
   opacity: 0.85;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 @keyframes arrowFade {
   0%   { opacity: 0; transform: translateY(-8px);}
@@ -268,16 +271,16 @@ body::before{
   <h1 id="title">18</h1>
   <h2>Rodri</h2>
   <p>Quiero celebrar este momento tan especial rodeado de quienes han estado a mi lado en cada paso del camino. Cada risa, cada recuerdo y cada apoyo me han llevado hasta aquí, y nada sería igual sin ustedes. Gracias por formar parte de mi vida; será una noche para disfrutar, recordar y crear nuevos recuerdos juntos...</p>
-  <!-- Flecha animada para indicar que hay que bajar -->
-  <div class="arrow-down" aria-hidden="true">
+  <!-- Flecha animada para indicar que hay que bajar y sirve como botón -->
+  <button class="arrow-down" aria-label="Bajar a la cuenta regresiva" id="arrowBtn" type="button">
     <svg width="38" height="38" viewBox="0 0 38 38" fill="none">
       <path d="M19 10V28" stroke="#FFD700" stroke-width="3" stroke-linecap="round"/>
       <path d="M11 20L19 28L27 20" stroke="#FFD700" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
-  </div>
+  </button>
 </section>
 
-<section class="countdown-section" aria-label="Cuenta regresiva">
+<section class="countdown-section" aria-label="Cuenta regresiva" id="countdownSection">
   <div class="countdown-title">Cuenta regresiva</div>
   <div class="countdown" role="timer" aria-live="polite">
     <div class="countcard"><span class="num" id="days">0</span><small>Días</small></div>
@@ -346,6 +349,11 @@ for(let i=0;i<120;i++){
   c.style.opacity=(0.6+Math.random()*0.4);
   document.body.appendChild(c);
 }
+
+// Flecha botón: scroll suave a la cuenta regresiva
+document.getElementById('arrowBtn').addEventListener('click', function() {
+  document.getElementById('countdownSection').scrollIntoView({behavior: 'smooth'});
+});
 
 // COUNTDOWN
 const target=new Date("March 7, 2026 21:00:00").getTime();
