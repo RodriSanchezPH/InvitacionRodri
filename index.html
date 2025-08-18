@@ -77,6 +77,23 @@ body::before{
   text-shadow: 0 0 8px rgba(255,215,0,0.06);
 }
 
+/* Flecha animada */
+.arrow-down {
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: arrowFade 1.8s infinite;
+  opacity: 0.85;
+}
+@keyframes arrowFade {
+  0%   { opacity: 0; transform: translateY(-8px);}
+  20%  { opacity: 1; transform: translateY(0);}
+  60%  { opacity: 1; transform: translateY(0);}
+  80%  { opacity: 0; transform: translateY(8px);}
+  100% { opacity: 0; transform: translateY(8px);}
+}
+
 /* COUNTDOWN */
 .countdown-section{
   min-height:100vh;
@@ -251,6 +268,13 @@ body::before{
   <h1 id="title">18</h1>
   <h2>Rodri</h2>
   <p>Quiero celebrar este momento tan especial rodeado de quienes han estado a mi lado en cada paso del camino. Cada risa, cada recuerdo y cada apoyo me han llevado hasta aquí, y nada sería igual sin ustedes. Gracias por formar parte de mi vida; será una noche para disfrutar, recordar y crear nuevos recuerdos juntos...</p>
+  <!-- Flecha animada para indicar que hay que bajar -->
+  <div class="arrow-down" aria-hidden="true">
+    <svg width="38" height="38" viewBox="0 0 38 38" fill="none">
+      <path d="M19 10V28" stroke="#FFD700" stroke-width="3" stroke-linecap="round"/>
+      <path d="M11 20L19 28L27 20" stroke="#FFD700" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
 </section>
 
 <section class="countdown-section" aria-label="Cuenta regresiva">
@@ -390,4 +414,3 @@ confirmBtn.addEventListener('click',()=>togglePanel(confirmBtn,confirmPanel));
 </script>
 </body>
 </html>
- 
