@@ -4,9 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>18 • Rodri — Invitación</title>
-
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
 <style>
 :root{
   --gold:#FFD700;
@@ -29,14 +27,17 @@ body{
 body::before{
   content:"";
   position:fixed; inset:0;
-  background:
-    radial-gradient(circle, rgba(255,215,0,0.03) 1px, transparent 1px);
+  background: radial-gradient(circle, rgba(255,215,0,0.03) 1px, transparent 1px);
   background-size:22px 22px;
   pointer-events:none;
   z-index:-1;
 }
-.confetti{ position: absolute; top:-10px; border-radius:50%; background:var(--gold); opacity:0.95;
-  animation: fall linear infinite; }
+
+/* Confetti */
+.confetti{
+  position: absolute; top:-10px; border-radius:50%;
+  background:var(--gold); opacity:0.95; animation: fall linear infinite;
+}
 @keyframes fall {
   0%{ transform: translateY(0) rotate(0deg); opacity:1 }
   100%{ transform: translateY(120vh) rotate(360deg); opacity:0 }
@@ -45,49 +46,29 @@ body::before{
 /* HERO */
 .hero{
   min-height:85vh;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  padding:36px 20px;
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  text-align:center; padding:36px 20px;
 }
 .hero h1{
   font-family:'Dancing Script', cursive;
-  font-size:6.2rem;
-  line-height:0.9;
-  margin:0;
+  font-size:6.2rem; line-height:0.9; margin:0;
   text-shadow: 0 0 15px var(--gold), 0 0 30px rgba(255,215,0,0.08);
 }
 .hero h2{
   font-family:'Dancing Script', cursive;
-  font-size:3rem;
-  margin:6px 0 18px 0;
-  text-shadow: 0 0 12px var(--gold);
-  letter-spacing:1px;
+  font-size:3rem; margin:6px 0 18px 0;
+  text-shadow: 0 0 12px var(--gold); letter-spacing:1px;
 }
 .hero p{
-  max-width:760px;
-  font-size:1.05rem;
-  color: #f6e7b6;
-  opacity:0.95;
-  margin:0 auto;
-  padding:0 8px;
-  line-height:1.5;
+  max-width:760px; font-size:1.05rem; color:#f6e7b6; opacity:0.95;
+  margin:0 auto 10px; padding:0 8px; line-height:1.5;
   text-shadow: 0 0 8px rgba(255,215,0,0.06);
 }
 
 /* Flecha animada */
 .arrow-down {
-  margin-top: 32px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: arrowFade 1.8s infinite;
-  opacity: 0.85;
-  background: none;
-  border: none;
-  cursor: pointer;
+  margin-top: 32px; display:flex; justify-content:center; align-items:center;
+  animation: arrowFade 1.8s infinite; opacity: 0.85; background:none; border:none; cursor:pointer;
 }
 @keyframes arrowFade {
   0%   { opacity: 0; transform: translateY(-8px);}
@@ -99,167 +80,112 @@ body::before{
 
 /* COUNTDOWN */
 .countdown-section{
-  min-height:100vh;
-  padding:56px 20px;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  gap:28px;
+  min-height:100vh; padding:56px 20px; display:flex; flex-direction:column; align-items:center; gap:28px;
 }
 .countdown-title{
-  font-size:1.5rem;
-  color:var(--gold);
-  opacity:0.95;
+  font-size:1.5rem; color:var(--gold); font-weight:600; opacity:0.95;
 }
 .countdown{
-  display:flex;
-  gap:18px;
-  align-items:center;
-  justify-content:center;
-  flex-wrap:nowrap;
-  overflow-x:auto;
+  display:flex; gap:18px; align-items:center; justify-content:center; flex-wrap:nowrap; overflow-x:auto;
 }
 .countcard{
-  min-width:80px;
-  padding:14px 12px;
-  border-radius:12px;
+  min-width:80px; padding:14px 12px; border-radius:12px;
   background:linear-gradient(145deg, rgba(255,215,0,0.15), rgba(255,215,0,0.05));
-  backdrop-filter: blur(4px);
-  text-align:center;
-  transition: transform .25s ease;
+  backdrop-filter: blur(4px); text-align:center; transition: transform .25s ease;
 }
 .countcard span.num{
-  display:block;
-  font-size:2.05rem;
-  font-weight:700;
-  color:var(--gold);
-  text-shadow:0 0 12px rgba(255,215,0,0.25);
-  transition: all .3s ease;
+  display:block; font-size:2.05rem; font-weight:700; color:var(--gold);
+  text-shadow:0 0 12px rgba(255,215,0,0.25); transition: all .3s ease;
 }
 .countcard small{
-  display:block;
-  font-size:.9rem;
-  color:#f7e7b0;
-  opacity:0.95;
+  display:block; font-size:.9rem; color:#f7e7b0; opacity:0.95;
 }
 
-/* FIESTA apartado */
+/* FIESTA */
 .fiesta-title {
-  display: block;
-  font-family: 'Dancing Script', cursive;
-  font-size: 2.8rem;
-  color: var(--gold);
-  text-align: center;
-  margin-bottom: 10px;
-  letter-spacing: 2px;
-  text-shadow: 0 0 12px #FFD70088;
-  font-weight: 700;
+  display:block; font-family:'Dancing Script', cursive; font-size:2.8rem;
+  color:var(--gold); text-align:center; margin-bottom:10px; letter-spacing:2px;
+  text-shadow:0 0 12px #FFD70088; font-weight:700;
 }
 .fiesta-details {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4px;
-  font-size: 1.15rem;
-  color: #f6e7b6;
-  text-align: center;
+  display:flex; flex-direction:column; align-items:center; gap:4px;
+  font-size:1.15rem; color:#f6e7b6; text-align:center;
 }
-.fiesta-subtext {
-  color: #bdbdbd;
-  font-size: 1rem;
-  margin-top: 8px;
-}
+.fiesta-subtext { color:#bdbdbd; font-size:1rem; margin-top:8px; }
 
-/* BOTONES RECTANGULARES */
-.controls {
-  display:flex;
-  gap:20px;
-  justify-content:center;
-  align-items:flex-start;
-  flex-wrap:wrap;
-  margin-top:6px;
-}
-.control{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  max-width:320px;
+/* CONTROLES */
+.controls { display:flex; gap:20px; justify-content:center; align-items:flex-start; flex-wrap:wrap; margin-top:6px; }
+.control{ display:flex; flex-direction:column; align-items:center; max-width:360px; width:100%; }
+.btn-message{ text-align:center; font-size:0.98rem; color:#f7e7b0; margin-bottom:10px; font-weight:400; }
+
+/* Botón pro: texto largo sin encimarse */
+.icon-btn {
   width:100%;
+  min-height:56px;
+  padding:14px 22px;
+  border-radius:16px;
+  display:inline-flex; align-items:center; justify-content:center;
+  font-size:1.05rem; font-weight:600; letter-spacing:1.2px; text-transform:uppercase;
+  text-align:center; line-height:1.25;
+  color:#14120a;
+  background: linear-gradient(135deg, #FFE781 0%, #FFD23A 50%, #FFC107 100%);
+  border:1px solid rgba(255,255,255,0.12);
+  box-shadow: 0 10px 26px rgba(0,0,0,0.45), inset 0 0 6px rgba(255,255,255,0.28);
+  cursor:pointer; transition: transform .25s ease, box-shadow .25s ease, filter .25s ease;
+  white-space:normal; word-break:break-word; hyphens:auto;
 }
-.btn-message{
-  text-align:center;
-  font-size:0.98rem;
-  color:#f7e7b0;
-  margin-bottom:10px;
+.icon-btn:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 16px 34px rgba(0,0,0,0.55), 0 0 18px rgba(255,215,0,0.35);
+  filter: brightness(1.03);
 }
-.icon-btn{
-  width:140px;
-  height:50px;
-  border-radius:12px;
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  font-size:1.5rem;
-  background: linear-gradient(140deg,var(--gold),var(--gold-2));
-  border:none;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.6), 0 0 18px rgba(255,215,0,0.12);
-  cursor:pointer;
-  transition: transform .28s cubic-bezier(.2,.9,.3,1), box-shadow .28s;
+.icon-btn:active { transform: translateY(0); }
+.icon-btn:focus-visible{
+  outline: 3px solid rgba(255, 215, 0, .55);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 6px rgba(255,215,0,0.15);
 }
-.icon-btn:hover{ transform: translateY(-4px) rotate(-3deg); box-shadow: 0 18px 40px rgba(0,0,0,0.6), 0 0 30px rgba(255,215,0,0.18) }
 
-/* PANEL desplegable */
+/* Panel desplegable */
 .panel{
-  width:100%;
-  margin-top:12px;
-  overflow:hidden;
-  max-height:0;
-  opacity:0;
-  transform: translateY(-10px);
-  transition: max-height .45s ease, opacity .35s ease .04s, transform .45s ease;
-  background: linear-gradient(180deg, rgba(255,215,0,0.04), rgba(255,215,0,0.02));
-  padding:0 12px;
-  border-radius:10px;
+  width:100%; margin-top:12px; overflow:hidden;
+  max-height:0; opacity:0; transform: translateY(-10px);
+  transition: max-height .45s ease, opacity .35s ease .05s, transform .45s ease, padding .2s ease;
+  background: linear-gradient(180deg, rgba(255,215,0,0.05), rgba(255,215,0,0.02));
+  padding:0 12px; border-radius:12px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.5);
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  gap:10px;
+  display:flex; flex-direction:column; align-items:center; gap:10px;
 }
 .panel.open{
-  max-height:320px;
-  opacity:1;
-  transform: translateY(0);
-  padding:12px;
+  opacity:1; transform: translateY(0); padding:12px;
 }
 .panel p, .panel .alias {
-  color:#111;
-  background: linear-gradient(90deg, #fff, #fff9c9);
-  padding:10px 12px;
-  width:100%;
-  border-radius:8px;
-  text-align:center;
-  font-weight:600;
-  user-select:text;
+  color:#111; background: linear-gradient(90deg, #fff, #fff9c9);
+  padding:10px 12px; width:100%; border-radius:10px; text-align:center; font-weight:600; user-select:text;
 }
-.panel .alias{ cursor:pointer; font-family:monospace; font-size:1rem; letter-spacing:.6px; color:#222 }
+.panel .alias{
+  cursor:pointer; font-family:monospace; font-size:1rem; letter-spacing:.6px; color:#222
+}
 .panel .small-btn{
-  margin-top:6px;
-  padding:8px 14px;
-  border-radius:10px;
-  border:none;
-  background:transparent;
-  color:var(--gold);
-  font-weight:700;
-  cursor:pointer;
+  margin-top:6px; padding:10px 16px; border-radius:12px; border:none;
+  background:linear-gradient(135deg, #1a1a1a, #0f0f0f);
+  color:var(--gold); font-weight:700; cursor:pointer;
   box-shadow: 0 6px 16px rgba(0,0,0,0.45);
 }
+.panel .small-btn:hover{ filter:brightness(1.1) }
 .copied-tip{ margin-top:6px; font-size:.9rem; color:#e7fbea; opacity:0.95 }
 
+/* Nuevo mensaje gris confirmación */
+.confirm-msg-grey{
+  margin-bottom:8px; color:#b0b0b0; font-weight:500; font-size:1rem; text-align:center;
+}
+
+/* Mobile */
 @media(max-width:680px){
   .hero h1{ font-size:4.6rem }
   .hero h2{ font-size:2.3rem }
-  .icon-btn{ width:130px; height:48px }
+  .control{ max-width:100% }
+  .icon-btn{ font-size:1rem; min-height:54px }
   .countcard span.num{ font-size:1.6rem }
   .countdown{ flex-wrap:nowrap; overflow-x:auto; padding:0 10px; gap:12px; }
 }
@@ -270,18 +196,18 @@ body::before{
 <section class="hero" aria-labelledby="title">
   <h1 id="title">18</h1>
   <h2>Rodri</h2>
-  <p>Quiero celebrar este momento tan especial rodeado de quienes han estado a mi lado en cada paso del camino. Cada risa, cada recuerdo y cada apoyo me han llevado hasta aquí, y nada sería igual sin ustedes. Gracias por formar parte de mi vida; será una noche para disfrutar, recordar y crear nuevos recuerdos juntos...</p>
-  <!-- Flecha animada para indicar que hay que bajar y sirve como botón -->
+  <p>Quiero celebrar este momento tan especial rodeado de quienes han estado a mi lado en cada paso del camino.</p>
+  <p>Cada risa, cada recuerdo y cada apoyo me han llevado hasta aquí, y nada sería igual sin ustedes. Gracias por formar parte de mi vida; será una noche para disfrutar, recordar y crear nuevos recuerdos juntos...</p>
   <button class="arrow-down" aria-label="Bajar a la cuenta regresiva" id="arrowBtn" type="button">
-    <svg width="38" height="38" viewBox="0 0 38 38" fill="none">
+    <svg width="38" height="38" viewBox="0 0 38 38" fill="none" aria-hidden="true">
       <path d="M19 10V28" stroke="#FFD700" stroke-width="3" stroke-linecap="round"/>
       <path d="M11 20L19 28L27 20" stroke="#FFD700" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
   </button>
 </section>
 
-<section class="countdown-section" aria-label="Cuenta regresiva" id="countdownSection">
-  <div class="countdown-title">Cuenta regresiva</div>
+<section class="countdown-section" aria-label="¡Te espero para festejar!" id="countdownSection">
+  <div class="countdown-title">¡Te espero para festejar!</div>
   <div class="countdown" role="timer" aria-live="polite">
     <div class="countcard"><span class="num" id="days">0</span><small>Días</small></div>
     <div class="countcard"><span class="num" id="hours">0</span><small>Horas</small></div>
@@ -289,48 +215,50 @@ body::before{
     <div class="countcard"><span class="num" id="seconds">0</span><small>Segundos</small></div>
   </div>
 
-  <!-- Apartado FIESTA con título elegante y contenido centrado -->
   <div class="party-info" style="margin-bottom:32px;">
     <span class="fiesta-title">FIESTA</span>
     <div class="fiesta-details">
       <span>Sábado 7 de Marzo de 2026</span>
       <span>21:00 hs.</span>
       <span>Salón Camioneros</span>
-      <span class="fiesta-subtext">Clickeá en el botón de abajo y encontrá las indicaciones para llegar</span>
+      <span class="fiesta-subtext">Clickeá en el botón de abajo y encontrá las indicaciones para llegar, ¡nos vemos!</span>
     </div>
   </div>
-  <!-- Fin apartado FIESTA -->
 
   <div class="controls" role="group" aria-label="Acciones">
 
     <div class="control">
       <div class="btn-message">Para llegar al salón</div>
-      <button class="icon-btn" id="locationBtn" aria-expanded="false" aria-controls="locationPanel">📍</button>
+      <button class="icon-btn" id="locationBtn" aria-expanded="false" aria-controls="locationPanel">
+        Cómo llegar
+      </button>
       <div class="panel" id="locationPanel" aria-hidden="true">
         <p>Camioneros San Rafael</p>
-        <button class="small-btn" id="openMapsBtn">Abrir en Google Maps ➜</button>
+        <button class="small-btn" id="openMapsBtn" type="button">Abrir en Google Maps ➜</button>
       </div>
     </div>
 
     <div class="control">
-      <div class="btn-message">Si deseas dejar un detalle</div>
-      <button class="icon-btn" id="giftBtn" aria-expanded="false" aria-controls="giftPanel">🎁</button>
+      <div class="btn-message">Si deseás dejar un detalle, clickeá acá abajo</div>
+      <button class="icon-btn" id="giftBtn" aria-expanded="false" aria-controls="giftPanel">
+        Hacer un regalo
+      </button>
       <div class="panel" id="giftPanel" aria-hidden="true">
-        <p>El mejor regalo es que me acompañes, pero si lo deseas también puedes colaborar. ¡Muchas gracias!</p>
-        <div class="alias" id="aliasText">RodriSanchez18</div>
-        <button class="small-btn" id="copyBtn">Copiar alias 📋</button>
+        <p>El mejor regalo es que me acompañes, pero si lo deseás también podés colaborar. ¡Muchas gracias!</p>
+        <div class="alias" id="aliasText" title="Tocá para copiar">RodriSanchez18</div>
+        <button class="small-btn" id="copyBtn" type="button">Copiar alias 📋</button>
         <div class="copied-tip" id="copiedTip" style="display:none">¡Alias copiado al portapapeles!</div>
       </div>
     </div>
 
     <div class="control">
-      <div class="btn-message">Confirmar asistencia</div>
-      <button class="icon-btn" id="confirmBtn">✅</button>
+      <div class="btn-message">Confirmación de asistencia</div>
+      <div class="confirm-msg-grey">Cuento con tu presencia. ¡Confirmá tu asistencia!</div>
+      <button class="icon-btn" id="confirmBtn" aria-expanded="false" aria-controls="confirmPanel">
+        Confirmar asistencia
+      </button>
       <div class="panel" id="confirmPanel" aria-hidden="true">
-        <p>Confirma tu asistencia al número donde recibiste la invitación.Indicando el nombre de todos los que asisten, o simplemente envia: No asisto.</p>
-        <div id="confirmMsg" style="margin-top:10px; color:#222; font-weight:600;">
-          ¡Gracias por confirmar tu asistencia! 🎉
-        </div>
+        <!-- Mensaje ahora ya no se usará -->
       </div>
     </div>
 
@@ -338,8 +266,8 @@ body::before{
 </section>
 
 <script>
-// CONFETTI
-for(let i=0;i<120;i++){
+/* ===== Confetti ===== */
+for(let i=0;i<100;i++){
   const c=document.createElement('div');
   c.className='confetti';
   const size=Math.random()*6+4;
@@ -350,17 +278,16 @@ for(let i=0;i<120;i++){
   document.body.appendChild(c);
 }
 
-// Flecha botón: scroll suave a la cuenta regresiva
-document.getElementById('arrowBtn').addEventListener('click', function() {
+/* ===== Flecha: scroll suave ===== */
+document.getElementById('arrowBtn').addEventListener('click', () => {
   document.getElementById('countdownSection').scrollIntoView({behavior: 'smooth'});
 });
 
-// COUNTDOWN
+/* ===== Countdown ===== */
 const target=new Date("March 7, 2026 21:00:00").getTime();
 function updateCountdown(){
   const now=Date.now();
-  let diff=target-now;
-  if(diff<0) diff=0;
+  let diff=target-now; if(diff<0) diff=0;
   const days=Math.floor(diff/(1000*60*60*24));
   const hours=Math.floor((diff%(1000*60*60*24))/(1000*60*60));
   const minutes=Math.floor((diff%(1000*60*60))/(1000*60));
@@ -374,51 +301,87 @@ function updateCountdown(){
     setTimeout(()=>el.style.transform='scale(1)',150);
   });
 }
-setInterval(updateCountdown,1000);
-updateCountdown();
+setInterval(updateCountdown,1000); updateCountdown();
 
-function togglePanel(btn,panel){
-  const open=panel.classList.contains('open');
-  panel.classList.toggle('open',!open);
-  btn.setAttribute('aria-expanded',!open);
-  panel.setAttribute('aria-hidden',open);
+/* ===== Panels ===== */
+const panels = {
+  location: document.getElementById('locationPanel'),
+  gift: document.getElementById('giftPanel'),
+  confirm: document.getElementById('confirmPanel')
+};
+const buttons = {
+  location: document.getElementById('locationBtn'),
+  gift: document.getElementById('giftBtn'),
+  confirm: document.getElementById('confirmBtn')
+};
+
+function setPanelState(panel, btn, open){
+  if(open){
+    panel.classList.add('open');
+    panel.style.maxHeight = panel.scrollHeight + 'px';
+    panel.setAttribute('aria-hidden','false');
+    btn.setAttribute('aria-expanded','true');
+  }else{
+    panel.classList.remove('open');
+    panel.style.maxHeight = '0';
+    panel.setAttribute('aria-hidden','true');
+    btn.setAttribute('aria-expanded','false');
+  }
 }
 
-// LOCATION
-const locationBtn=document.getElementById('locationBtn');
-const locationPanel=document.getElementById('locationPanel');
-const openMapsBtn=document.getElementById('openMapsBtn');
-locationBtn.addEventListener('click',()=>togglePanel(locationBtn,locationPanel));
-openMapsBtn.addEventListener('click',()=>window.open('https://www.google.com/maps?q=Camioneros+San+Rafael','_blank'));
+function closeAllPanels(){
+  setPanelState(panels.location, buttons.location, false);
+  setPanelState(panels.gift, buttons.gift, false);
+  setPanelState(panels.confirm, buttons.confirm, false);
+}
 
-// GIFT
-const giftBtn=document.getElementById('giftBtn');
-const giftPanel=document.getElementById('giftPanel');
-giftBtn.addEventListener('click',()=>togglePanel(giftBtn,giftPanel));
+function togglePanel(btnKey){
+  const panel = panels[btnKey];
+  const btn = buttons[btnKey];
+  const willOpen = !panel.classList.contains('open');
+  closeAllPanels();
+  setPanelState(panel, btn, willOpen);
+}
 
+/* Eventos de botones */
+buttons.location.addEventListener('click', ()=>togglePanel('location'));
+buttons.gift.addEventListener('click', ()=>togglePanel('gift'));
+
+/* ===== Confirmación: redirigir a Google Forms ===== */
+buttons.confirm.addEventListener('click', () => {
+  setPanelState(panels.confirm, buttons.confirm, false);
+  window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSdUtqrwGXFeSEcEhGKQROeYp0VdvFrOQx56KMzQdB7Oubpaig/viewform?usp=header";
+});
+
+/* ===== Ubicación: abrir Maps ===== */
+document.getElementById('openMapsBtn').addEventListener('click',()=>{
+  window.open('https://www.google.com/maps?q=Camioneros+San+Rafael','_blank','noopener,noreferrer');
+});
+
+/* ===== Regalo: copiar alias ===== */
 const aliasText=document.getElementById('aliasText');
 const copyBtn=document.getElementById('copyBtn');
 const copiedTip=document.getElementById('copiedTip');
+
 async function copyAlias(){
-  try{ await navigator.clipboard.writeText(aliasText.textContent.trim()); }
-  catch(e){ 
+  const value = aliasText.textContent.trim();
+  try{
+    await navigator.clipboard.writeText(value);
+  }catch(e){
     const ta=document.createElement('textarea');
-    ta.value=aliasText.textContent.trim();
+    ta.value=value;
     document.body.appendChild(ta);
     ta.select();
     document.execCommand('copy');
-    document.body.removeChild(ta);
+    ta.remove();
   }
   copiedTip.style.display='block';
   setTimeout(()=>copiedTip.style.display='none',2300);
 }
 aliasText.addEventListener('click',copyAlias);
 copyBtn.addEventListener('click',copyAlias);
-
-// CONFIRM simple
-const confirmBtn=document.getElementById('confirmBtn');
-const confirmPanel=document.getElementById('confirmPanel');
-confirmBtn.addEventListener('click',()=>togglePanel(confirmBtn,confirmPanel));
 </script>
+
 </body>
 </html>
+
